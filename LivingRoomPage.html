@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- <html lang="en"> -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,7 +41,6 @@
 
             txtSysMsg = fnValidate();
             if (txtSysMsg != '') {
-
                 alert(txtSysMsg);
             } else {
                 txtcolor = document.getElementById('color').value;
@@ -130,16 +132,20 @@
     </div>
     <br />
     <br />
-    <p class="question1">Select the style that appeals to you: </p>
+    <br />
+    <br />
+    <br />
+    <div class="survey"></div>
+    <p class="question1" style="font-size: 1.5em">Select the style that appeals to you: </p>
 
-    <input type="radio" id="radStyle1" value="images/livingroom/modern" checked> <img src="images/livingroom/modern/large-black.jpg">
-    <br /> <input type="radio" id="radStyle2" value="images/livingroom/country"><img src="images/livingroom/modern/large-black.jpg">
-    <br /><input type="RADIO" id="radStyle3" value="images/livingroom/industrial"> <img src="images/livingroom/modern/large-black.jpg">
+    <input type="radio" id="radStyle1" value="images/livingroom/modern" checked> <img src="images/style1.jpg" style="width: 200px">
+    <br /> <input type="radio" id="radStyle2" value="images/livingroom/country"><img src="images/livingroom/modern/small/black/1.jpg" style="width:200px">
+    <br /><input type="RADIO" id="radStyle3" value="images/livingroom/industrial"> <img src="images/livingroom/modern/small/black/1.jpg" style="width:200px">
 
 
     <br />
     <br />
-    <p class="question1">What size is the room: </p>
+    <p class="question2" style="font-size: 1.5em">What size is the room: </p>
 
     <select id="size">
         <option value="">select...</option>
@@ -150,12 +156,12 @@
     <br />
     <br />
 
-    <p class="question1">What color do you like the most: </p>
+    <p class="question3" style="font-size: 1.5em">What color do you like the most: </p>
 
     <select id="color">
         <option value="">select...</option>
         <option value="white">white</option>
-        <option value="blue">blue</option>
+        <option value="blue">gray</option>
         <option value="black">black</option>
     </select>
     <input type="button" value="go" onclick="fnGetFurn()">
