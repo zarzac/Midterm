@@ -196,6 +196,7 @@ body {
         border: none;
         border-radius: 4px;
         cursor: pointer;
+        
     }
 
     input[type=submit]:hover {
@@ -212,43 +213,15 @@ body {
     }
 
     /*quiz------------------------------------------------------*/
-    .imagebuttons{
-        height: 200px;
-        width: 200px;
-    }
-    .diningstyle1{
-        background-image:
-    }
-    .diningstyle2{
-        
-    }
-    .diningstyle3{
-        
-    }
-    
-    .bedroomstyle1{
-        background-image:
-    }
-    .bedroomstyle2{
-        
-    }
-    .bedroomstyle3{
-        
-    }
-    
-     .livingstyle1{
-        background-image: url(images/living%20roomsmall.jpeg) no-repeat scroll 0 0 trasnparent;
-         width: 200px;
-         height 20px;
-    }
-    .livingstyle2{
-        
-    }
-    .livingstyle3{
+    .survey {
+        position: relative;
+        border-style: solid;
+        border-color: black;
         
     }
     /* MODAL
     ------------------------------ */
+    
     #myModal {}
 
     .modal-dialog {}
