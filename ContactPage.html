@@ -11,7 +11,8 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>Carousel Template for Bootstrap</title>
-
+    <!-- for imported fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans+Condensed:300|Oswald" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="bootstrap-3.3.7/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -30,6 +31,85 @@
 
     <!-- Custom styles for this template -->
     <link href="midterm.css" rel="stylesheet">
+    <style>
+        .contact-title{
+            font-size: 20px;
+        }
+        label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+            text-transform: uppercase;
+}
+
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    input[type=submit] {
+        background-color: #646267;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    input[type=submit]:hover {
+        background-color: #616A6B;
+    }
+
+/* CONTACT FORM CSS */
+.contactform {
+    position: fixed;
+    top: 100px;
+ left: auto;
+
+    z-index: 20;
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 25px;
+font-family: 'Montserrat', sans-serif;
+}
+        .col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+}
+
+</style>
 </head>
 
 <body>
@@ -45,7 +125,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Project name</a>
+                        <a class="navbar-brand" href="#" style="font-size: 25px">EASY FURNISH</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
@@ -68,23 +148,24 @@
                     </div>
                 </div>
             </nav>
-
         </div>
     </div>
 
 
     <div class="contactform">
 
-        <h3>Contact Form</h3>
-
+        <p class="contact-title">Contact Form: </p>
+        <br />
         <form action="/action_page.php">
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
             <label for="lname">Last Name</label>
             <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-            <label for="emailaddress">Email </label>
-            <input type="email" id="email" name="emailaddress" placeholder="Your email address.."> <label for="subject">Comments/Questions/Concerns</label>
+            <label for="emailaddress">Email</label>
+            <input type="text" id="email" name="emailaddress" placeholder="Your email address..">
+            <br />
+            <label for="subject">Comments / Questions / Concerns</label>
             <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
             <input type="submit" value="Submit">
