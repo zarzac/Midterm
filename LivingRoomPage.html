@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- <html lang="en"> -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,6 +31,63 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script type="text/javascript">
+        function fnGetFurn() {
+            var txtSysMsg = '';
+            var txtpath = '';
+            var txtstyle = '';
+            var txtsize = '';
+            var txtcolor = '';
+
+            txtSysMsg = fnValidate();
+            if (txtSysMsg != '') {
+                alert(txtSysMsg);
+            } else {
+                txtcolor = document.getElementById('color').value;
+                txtSize = document.getElementById('size').value;
+
+                if (document.getElementById('radStyle1').checked == true) {
+                    txtStyle = document.getElementById('radStyle1').value
+                }
+
+
+                if (document.getElementById('radStyle2').checked == true) {
+                    txtStyle = document.getElementById('radStyle2').value
+                }
+                if (document.getElementById('radStyle3').checked == true) {
+                    txtStyle = document.getElementById('radStyle3').value
+                }
+
+                txtpath = txtStyle + '/' +
+                    txtSize + '/' + txtcolor + '/1.jpg';
+                alert(txtpath);
+                document.getElementById('imgFrn').src = txtpath;
+            }
+        } // end function
+
+
+
+
+        function fnValidate() {
+            var txtSysMsg = '';
+            var txtstyle = '';
+            var txtsize = '';
+            var txtcolor = '';
+            txtcolor = document.getElementById('color').value;
+            txtSize = document.getElementById('size').value;
+            if (txtcolor == '') {
+                txtSysMsg = 'You must pick a color.\n';
+            }
+            if (txtSize == '') {
+                txtSysMsg += 'You must pick a size.\n';
+            }
+            return (txtSysMsg);
+        }
+
+    </script>
+
+
+
     <!-- Custom styles for this template -->
     <link href="midterm.css" rel="stylesheet">
 </head>
@@ -35,7 +95,7 @@
 <body>
     <div class="navbar-wrapper">
         <div class="container">
-
+            <!-- hshhshsdh -->
             <nav class="navbar navbar-inverse navbar-static-top">
                 <div class="container">
                     <div class="navbar-header">
@@ -68,9 +128,9 @@
                     </div>
                 </div>
             </nav>
-
         </div>
     </div>
+<<<<<<< HEAD
     
     <div>
         
@@ -78,6 +138,58 @@
         
     </div>
     </body>
+=======
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="survey"></div>
+    <p class="question1" style="font-size: 1.5em">Select the style that appeals to you: </p>
 
+    <input type="radio" id="radStyle1" value="images/livingroom/modern" checked> <img src="images/style1.jpg" style="width: 200px">
+    <br /> <input type="radio" id="radStyle2" value="images/livingroom/country"><img src="images/livingroom/modern/small/black/1.jpg" style="width:200px">
+    <br /><input type="RADIO" id="radStyle3" value="images/livingroom/industrial"> <img src="images/livingroom/modern/small/black/1.jpg" style="width:200px">
+
+
+    <br />
+    <br />
+    <p class="question2" style="font-size: 1.5em">What size is the room: </p>
+
+    <select id="size">
+        <option value="">select...</option>
+        <option value="small">small</option>
+        <option value="medium">medium</option>
+        <option value="large">large</option>
+    </select>
+    <br />
+    <br />
+
+    <p class="question3" style="font-size: 1.5em">What color do you like the most: </p>
+
+    <select id="color">
+        <option value="">select...</option>
+        <option value="white">white</option>
+        <option value="blue">gray</option>
+        <option value="black">black</option>
+    </select>
+    <input type="button" value="go" onclick="fnGetFurn()">
+
+    <div>
+        <img src="" id="imgFrn" style="">
+
+    </div>
+
+
+
+
+
+
+
+
+
+>>>>>>> b952f0083d871fbf804188b7e39e044232f018f8
+
+</body>
 
 </html>
