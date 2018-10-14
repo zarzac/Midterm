@@ -1,12 +1,67 @@
 <!DOCTYPE html>
+<!-- <html lang="en"> -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
+<style>
+
+    input[type=radio]:checked + label > img {
+        border: 1px solid #fff;
+        box-shadow: 0 0 3px 3px #337ab7;
+    }
+    input[type=radio] + label > img {
+        width: 150px;
+        height: 150px;
+        transition: 500ms all;
+    }
+    .input-hidden {
+        position: absolute;
+        left:-9999px;
+    }
+    .survey-container{
+      border-style: groove;
+      border-width: 2px;
+      display: inline-block;
+    position: absolute;
+    transform: translate(-50%, 0%);
+      left: 50%;
+      padding: 20px;   
+    }
+    .buildmyroom{
+        background-color: #646267;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    .survey {
+    font-family: 'Montserrat', sans-serif;
+        
+    }
+    
+    footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  height: 60px;
+  background-color: #efefef;
+  text-align: center;
+    }
+    span {
+        display: inline-block;
+  vertical-align: middle;
+    }
+</style>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- The above 3 meta tags must come first in the head; any other head content must come after these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- for imported fonts -->
@@ -110,7 +165,7 @@
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li><a href="Page1.html">Home</a></li>
-                            <li><a href="#about">About</a></li>
+                            <li><a href="About.html">About</a></li>
                             <li><a href="ContactPage.html">Contact</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -135,85 +190,87 @@
     <br />
     <br />
     <br />
-<<<<<<< HEAD
-    <div class="survey">
-    <p class="question1" style="font-size: 1.5em">Select the style that appeals to you: </p>
-
-    <input type="radio" id="radStyle1" value="images/livingroom/modern" checked> <img src="images/style1.jpg" style="width: 200px">
-    <br /> <input type="radio" id="radStyle2" value="images/livingroom/country"><img src="images/livingroom/modern/small/black/1.jpg" style="width:200px">
-    <br /><input type="RADIO" id="radStyle3" value="images/livingroom/industrial"> <img src="images/livingroom/modern/small/black/1.jpg" style="width:200px">
 
 
-    <br />
-    <br />
-    <p class="question2" style="font-size: 1.5em">What size is the room: </p>
 
-    <select id="size">
-        <option value="">select...</option>
-        <option value="small">small</option>
-        <option value="medium">medium</option>
-        <option value="large">large</option>
-    </select>
-    <br />
-    <br />
-
-    <p class="question3" style="font-size: 1.5em">What color do you like the most: </p>
-
-    <select id="color">
-        <option value="">select...</option>
-        <option value="white">white</option>
-        <option value="blue">gray</option>
-        <option value="black">black</option>
-    </select>
-    <input type="button" value="go" onclick="fnGetFurn()">
-
-    <div>
-        <img src="" id="imgFrn" style="">
-=======
->>>>>>> c04aa0a97c44238b03c0d1ee3bcc6eaad4c9c1fb
 
     <!-- QUIZ CONTENT -->
-    <div class="survey">
-        <p class="question1" style="font-size: 1.5em">Select the style that appeals to you: </p>
+    <div class="survey-container">
+        <div class="survey">
+            <p class="question1" style="font-size: 1.5em">Select the style that appeals to you: </p>
+            <br />
+            <br />
+            <input type="radio" id="radStyle1" name="pick" class="input-hidden" value="images/livingroom/modern" />
+            <label for="radStyle1">
+                <img src="images/style1.jpg" style="width: 200px">
+            </label>
 
-        <input type="radio" id="radStyle1" value="images/livingroom/modern" checked> <img src="images/style1.jpg" style="width: 200px">
-        <br /> <input type="radio" id="radStyle2" value="images/livingroom/country"><img src="images/livingroom/modern/small/black/1.jpg" style="width:200px">
-        <br /><input type="RADIO" id="radStyle3" value="images/livingroom/industrial"> <img src="images/livingroom/modern/small/black/1.jpg" style="width:200px">
 
-        <br />
-        <br />
-        <p class="question2" style="font-size: 1.5em">What size is the room: </p>
 
-        <select id="size">
-            <option value="">select...</option>
-            <option value="small">small</option>
-            <option value="medium">medium</option>
-            <option value="large">large</option>
-        </select>
-        <br />
-        <br />
+            <input type="radio" id="radStyle2" name="pick" class="input-hidden" value="images/livingroom/country">
+            <label for="radStyle2">
+                <img src="images/livingroom/modern/small/black/1.jpg" style="width:200px">
+            </label>
 
-        <p class="question3" style="font-size: 1.5em">What color do you like the most: </p>
 
-        <select id="color">
-            <option value="">select...</option>
-            <option value="white">white</option>
-            <option value="blue">gray</option>
-            <option value="black">black</option>
-        </select>
-        <input type="button" value="go" onclick="fnGetFurn()">
-        <div>
-            <img src="" id="imgFrn" style="">
+            <input type="radio" id="radStyle3" name="pick" class="input-hidden" value="images/livingroom/industrial">
+            <label for="radStyle3">
+                <img src="images/livingroom/modern/small/black/1.jpg" style="width:200px">
+            </label>
+
+
+            <br />
+            <br />
+
+
+
+
+
+
+
+            <p class="question2" style="font-size: 1.5em">What size is the room: </p>
+
+            <select id="size">
+                <option value="">select...</option>
+                <option value="small">small</option>
+                <option value="medium">medium</option>
+                <option value="large">large</option>
+            </select>
+            <br />
+            <br />
+
+            <p class="question3" style="font-size: 1.5em">What color do you like the most: </p>
+
+
+
+
+
+
+
+            <select id="color">
+                <option value="">select...</option>
+                <option value="white">white</option>
+                <option value="blue">gray</option>
+                <option value="black">black</option>
+            </select>
+            <br />
+            <br />
+            <br />
+            <input type="button" class="buildmyroom" value="Build My Room" onclick="fnGetFurn()">
+
+
+            <div>
+                <img src="" id="imgFrn" style="">
+            </div>
         </div>
+
     </div>
-
-<<<<<<< HEAD
-    </div>
-=======
-
->>>>>>> c04aa0a97c44238b03c0d1ee3bcc6eaad4c9c1fb
-
+    
+    
+<footer><span>
+   This footer will always be positioned at the bottom of the page, but <strong>not fixed</strong>
+   </span>
+    </footer>
 
 </body>
-
 </html>
